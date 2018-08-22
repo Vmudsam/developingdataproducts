@@ -15,15 +15,16 @@ The webpage must contain the date that I created the document, and it must conta
 My map is showing my favorite city in the world whith the best universities and I host my webpage on GitHub Pages.
 
 ##Plot the map
-Plot the map using leaflet.
+Plot the map using leaflet and add date.
 
+#August 21, 2018
 ```{r, echo=FALSE}
 library(leaflet)
 names<-c('KTH Royal Institute of Technology','University of Stockholm','Stockholm School of Economics')
 lat<-c(59.3498,59.3622,59.3416)
 lng<-c(18.0707,18.0578,18.0568)
-theater_coords<-data.frame(lat,lng)
-theater_coords %>%
+uni_coords<-data.frame(lat,lng)
+uni_coords %>%
 leaflet() %>%
 addTiles() %>%
 addMarkers(label=names)
